@@ -21,7 +21,19 @@ Greetings to Usagi Electric.
 
 `Hellorld!` is intentional and is a small tribute to Usagi Electric.
 
-## Current state
+## Development stages
+
+`Hello_tcc` represents **Step 01** of the TinyCC/DexOS experiment:
+
+1. Build and run a TCC-generated C program under DexOS. **DONE**
+2. Build a small reusable C/DexOS development environment.
+3. Build TinyCC itself as a DexOS executable.
+4. Run TCC natively under DexOS.
+5. Compile a C program using TCC running under DexOS.
+6. Run the resulting program under DexOS.
+7. Compile TinyCC with TinyCC running under DexOS (self-hosting).
+
+## Current state 'Hello_tcc / Step 01': **DONE**
 
 The current tool chain is:
 
