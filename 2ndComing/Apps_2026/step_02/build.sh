@@ -24,16 +24,22 @@ tcc \
 echo
 echo "=== 3. Linken ==="
 
-tcc \
-    -m32 \
-    -nostdlib \
-    -static \
-    -Wl,-Ttext=01A00000 \
+#tcc \
+#    -m32 \
+#    -nostdlib \
+#    -static \
+#    -Wl,-Ttext=01A00000 \
+#    -o hellotcc.elf \
+#    tccdexstart.o \
+#    dexruntime.o \
+#    tcchello.o
+
+
+ld -m elf_i386 -T dexos.ld \
     -o hellotcc.elf \
     tccdexstart.o \
     dexruntime.o \
     tcchello.o
-
 
 echo
 echo "=== 4. DEX erzeugen ==="
