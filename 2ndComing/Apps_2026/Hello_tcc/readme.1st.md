@@ -40,34 +40,31 @@ The current tool chain is:
 ```text
 tcchello.c
     |
-    |  TinyCC
-    vstep 1: compile a dummy c file to be executed on DexOS
-hello.c
-startup.asm
-build.sh (my folder structure hardcoded!!!!) change before use
-
+    | TinyCC - compile
+    v
 tcchello.o
     |
     |                         tccdexstart.asm
     |                              |
-    |                              |  FASM
+    |                              | FASM
     |                              v
     |                         tccdexstart.o
     |                              |
     +---------------+--------------+
                     |
-                    |  TinyCC linker
+                    | TinyCC - link
                     v
                 hellotcc.elf
                     |
-                    |  objcopy -O binary
+                    | objcopy -O binary
                     v
                 hellotcc.dex
                     |
-                    |  mcopy
+                    | mcopy
                     v
               DexOS FAT12 image
                     |
+                    | QEMU
                     v
                   DexOS
 ```
