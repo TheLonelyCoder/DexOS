@@ -25,8 +25,7 @@ dex_start:
     mov ecx,__bss_end
     sub ecx,edi
 
-    ; xor eax,eax         ; Original: Initialize with 0x00
-    mov eax,0A5h          ; TEST: Initialize with 0xA5
+    xor eax,eax         ; Original: Initialize with 0x00
 
     cld
     rep stosb

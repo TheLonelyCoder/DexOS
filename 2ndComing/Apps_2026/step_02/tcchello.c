@@ -24,20 +24,9 @@ int main(void)
 
     int bss_is_zero = 1;
 
-    if ((unsigned char)bss_buffer[0] == 0xA5 &&
-        (unsigned char)bss_buffer[79] == 0xA5)
-    {
-        dex_print_string("BSS pattern: OK\r\n");
-    }
-    else
-    {
-        dex_print_string("BSS pattern: FAILED\r\n");
-    }
-
     for (int i = 0; i < 80; i++)
     {
-        // if (bss_buffer[i] != 0xA5)
-        if ((unsigned char)bss_buffer[i] != 0xA5)
+        if (bss_buffer[i] != 0x00)
         {
             bss_is_zero = 0;
             break;
